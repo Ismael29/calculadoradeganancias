@@ -3,46 +3,46 @@ import SubMenu from "./SubMenu";
 import Resumen from "./Resumen";
 const MenuResumen = ()=> {
     
-    const [artefactos, setArtefactos]=useState({
+    const [artefactos, ]=useState({
         "1":{
-            nombre:"Aplique 1 Luz",
-            precio: 150
+            nombre:"Campo 1 Luz",
+            precio: 1094
         },
         "2":{
-            nombre:"Aplique 2 Luces",
-            precio: 200
+            nombre:"Campo 2 Luces",
+            precio: 1193
         },
         "3":{
-            nombre:"Oxido 1 Luz",
-            precio: 300
+            nombre:"Campo 3 Luces",
+            precio: 1680
         },
         "4":{
-            nombre:"Oxido 2 Luces",
-            precio: 300
+            nombre:"Aplique Campo",
+            precio: 900
         },
         "5":{
-            nombre:"Colgante 1 Luz",
-            precio: 300
+            nombre:"Doble Campo",
+            precio: 1175
         },
         "6":{
-            nombre:"Colgante 2 Luces",
-            precio: 300
+            nombre:"Velador Campo",
+            precio: 930
         },
         "7":{
-            nombre:"Colgante 3 Luces",
-            precio: 300
+            nombre:"Proximo Artefacto",
+            precio: 0
         },
         "8":{
-            nombre:"Colgante 4 Luces",
-            precio: 300
+            nombre:"Proximo Artefacto",
+            precio: 0
         },
         "9":{
-            nombre:"Colgante 4 Luces Cruz",
-            precio: 300
+            nombre:"Proximo Artefacto",
+            precio: 0
         },
         "10":{
-            nombre:"Velador Campo",
-            precio: 300
+            nombre:"Proximo Artefacto",
+            precio: 0
         }
     });
     const [carritoInfo,setCarritoInfo]=useState({});
@@ -50,7 +50,7 @@ const MenuResumen = ()=> {
     
     useEffect(() => {
         let total = 0;
-        Object.keys(carritoInfo).map((parametro,_) => {
+        Object.keys(carritoInfo).forEach((parametro,x) => {
           let qty = carritoInfo[parametro];
           let price = artefactos[parametro].precio;
           total += qty * price; 

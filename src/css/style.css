@@ -27,7 +27,6 @@
 body {
     background-image: linear-gradient(#000000, #434343);
     font-family: "Apple Chancery", cursive ;
-    
 }
 
 h1,
@@ -59,7 +58,7 @@ button {
 }
 
 .w-50 {
-    width: 60%;
+    width: auto;
 }
 
 .text-center {
@@ -70,13 +69,13 @@ button {
 #app-holder {
     display: flex;
     justify-content: center;
-    height: 150vh;
+    height: auto;
     flex-direction: column;
 }
 
 #menu-cart {
     background-color: var(--secondary-bg);
-    height: 800px;
+    height: auto;
     display: flex;
     padding: var(--s1);
     border-radius: var(--s0);
@@ -104,6 +103,7 @@ button {
 
 .menu-text {
     padding: var(--s-2) 0;
+    
 }
 
 .menu-action {
